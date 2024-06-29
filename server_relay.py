@@ -37,3 +37,5 @@ def start_relay_server(port: int):
 
     threading.Thread(target=listen).start()
     return {"status": "Relay server started", "port": port}
+
+start_relay_server(3658)
