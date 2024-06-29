@@ -12,7 +12,7 @@ def relay_thread(sock, peer1_addr, peer2_addr):
         elif addr == peer2_addr:
             sock.sendto(data, peer1_addr)
 
-@app.get("/start_relay_server")
+@app.get("/start_relay")
 def start_relay_server(port: int):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(('', port))
